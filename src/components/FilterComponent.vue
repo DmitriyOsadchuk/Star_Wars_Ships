@@ -17,6 +17,10 @@
                     <label class="pilit_name" for="name">{{post.name}}</label>
                 </div>
                 <a href="#">View All</a>
+<!--                <button class="btn_more" @click="showAllPilots = !showAllPilots">-->
+<!--                    <p v-if="showAllPilots" class="view_more">view less</p>-->
+<!--                    <p v-else class="view_more">view more</p>-->
+<!--                </button>-->
             </div>
             <div class="filter_slide">
                 <h3 class="title_filter">Crew Size</h3>
@@ -83,6 +87,7 @@
                 maxCrew: 33333,
                 minPassengers: 0,
                 maxPassengers: 33333,
+                showAllPilots: false,
 
             }
         },
@@ -100,6 +105,15 @@
                 }
             }
 
+        },
+        computed: {
+            renderPilots() {
+                if (this.showAllPilots) {
+                    return this.info;
+                } else {
+                    return this.info.slice(0, 5);
+                }
+            },
         },
         mounted() {
             axios
