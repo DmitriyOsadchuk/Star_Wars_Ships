@@ -1,34 +1,25 @@
 <template>
   <div id="app">
-<!--    <hamburger-component/>-->
+    <hamburger-component/>
     <header-component/>
-    <main-title-component/>
-    <star-wars-list-component/>
-    <communicate-component/>
+    <router-view/>
     <footer-component/>
-
-
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent'
-import MainTitleComponent from "./components/MainTitleComponent";
 import FooterComponent from "./components/FooterComponent";
-import StarWarsListComponent from "./components/StarWarsListComponent";
-import CommunicateComponent from "./components/CommunicateComponent";
-// import HamburgerComponent from "./components/HamburgerComponent";
+
+import HamburgerComponent from "./components/HamburgerComponent";
 
 
 export default {
   name: 'App',
   components: {
-    // HamburgerComponent,
-    StarWarsListComponent,
-    FooterComponent,
-    CommunicateComponent,
-    MainTitleComponent,
-    HeaderComponent,
+      HamburgerComponent,
+      FooterComponent,
+      HeaderComponent,
   }
 }
 </script>

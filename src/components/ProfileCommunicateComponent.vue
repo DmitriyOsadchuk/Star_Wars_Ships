@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class=" communicate">
-            <div class="col-md communicate_content">
+            <div class=" communicate_content">
                 <div class="contact_form">
                     <form action="#">
                         <div class="form_item">
@@ -18,8 +18,8 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md sputnik">
-                <img class="communicate_img" src="images/sputnik.png" alt="sputnik">
+            <div class="planet">
+                <img class="communicate_img" src="images/death-star-drone-star-wars.png" alt="sputnik">
             </div>
         </div>
     </div>
@@ -27,12 +27,11 @@
 
 <script>
     export default {
-        name: "CommunicateComponent"
+        name: "ProfileCommunicateComponent"
     }
 </script>
 
 <style scoped>
-
     .container {
         max-width: 1300px;
         padding: inherit;
@@ -112,13 +111,13 @@
             bottom: 25px;
         }
     }
-
+    
     @media (min-width: 768px ) {
         .contact_form {
             width: 350px;
 
         }
-
+        
     }
     @media (min-width: 1200px) {
         .contact_form {
