@@ -1,10 +1,12 @@
 <template>
     <div v-if="this.info" class="starships_content">
         <div v-for="post in renderStarShips" :key="post.id" class="information">
-            <div class="info_content_block">
-                <p class="inside_info">MGLT: {{post.MGLT}}</p>
-            </div>
-            <p>{{post.name}}</p>
+            <router-link :to="{ name: 'profile', params:{url: post.url} }">
+                <div class="info_content_block">
+                    <h3 class="inside_info">MGLT: {{post.MGLT}}</h3>
+                </div>
+            </router-link>
+            <p class="starship_name">{{post.name}}</p>
             <p>CR: {{post.cost_in_credits}}</p>
             <p>CREW: {{post.crew}}</p>
             <p>PSNGS: {{post.passengers}}</p>
@@ -24,7 +26,6 @@
 
     export default {
         name: "StarWarsStarshpisComponent",
-
         data() {
             return {
                 info: null,
@@ -59,9 +60,18 @@
         /* justify-content: space-around; */
         margin: 100px 10px 10px 35px;
     }
+
     .information {
         text-align: start;
         margin-right: 25px;
+    }
+    .starship_name {
+        font-weight: 600;
+    }
+    .information p {
+        font-size: 18px;
+        line-height: 32px;
+
     }
 
     .info_content_block {
@@ -73,6 +83,9 @@
         display: flex;
         align-items: flex-end;
         padding: 15px;
+    }
+    .info_content_block:hover {
+        background-color: #0066FF;
     }
 
     .inside_info {
@@ -101,9 +114,10 @@
         line-height: 18px;
         align-items: center;
         text-transform: uppercase;
-        /*margin: 7px;*/
-
         border-radius: 5px;
+    }
+    .btn_more:hover {
+        background-color: #0066FF;
     }
 
     @media (max-width: 530px) {

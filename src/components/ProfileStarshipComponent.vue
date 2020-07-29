@@ -1,26 +1,53 @@
 <template>
     <div class="container_starship">
         <div class="starship_info">
-            <div class="text_info">
+            <div class="text_info" v-if="info">
                 <div class="text">
-                    <h3>Executor</h3>
-                    <p>Model: jhfhrdhtrdtrdhtrdtr ytfy dyhdhytchdhtrdyfyutf ytfytf </p>
-                    <p>Manufacturer: htrdtrdhtrdtr ytfy dyhdhytchdhtrdyfyutf ytf </p>
-                    <p>Starship_class: htrdtrdhtrdtr ytfy dyhdhytchdhtrdyfyutf ytf</p>
+                    <div>
+                        <h3>{{info.name}}</h3>
+                    </div>
+                    <div>
+                        <p>Model: {{info.model}}</p>
+                    </div>
+                    <div>
+                        <p>Manufacturer: {{info.manufacturer}}</p>
+                    </div>
+                    <div>
+                        <p>Starship_class: {{info.starship_class}}</p>
+                    </div>
+
                 </div>
 
                 <a href="#" class="link_api">Copi api url</a>
             </div>
             <div class="info_content_block">
-                <p class="inside_info">MGLT: </p>
+                <p class="inside_info">MGLT: {{info.MGLT}}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import axios from "axios";
+
     export default {
-        name: "ProfileStarshipComponent"
+        name: "ProfileStarshipComponent",
+        data() {
+            return {
+                info: null,
+                url: null,
+            };
+        },
+        created() {
+            this.url = this.$route.params.url
+        },
+
+        mounted() {
+            axios
+                .get(`${this.url}`)
+                .then((response) => (this.info = response.data))
+                .catch((error) => console.log(error));
+        },
     }
 </script>
 
@@ -75,5 +102,14 @@
         display: flex;
         align-items: flex-end;
         padding: 15px;
+    }
+    @media (max-width: 725px) {
+        .starship_info {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .text_info {
+            margin-top: 20px
+        }
     }
 </style>

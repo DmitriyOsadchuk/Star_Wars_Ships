@@ -2,8 +2,14 @@
 
     <aside>
         <div class="starships_title">
-            <h1>Our<tr/> starships</h1>
+            <h1>Our starships</h1>
+            <div class="select_filter">
+                <select v-model="select">
+                    <option v-for="(select, index) in selects" :key="index">{{select}}</option>
+                </select>
+            </div>
         </div>
+
         <div class="filters">
             <div class="title_pilots_num">
                 <h3 class="title_filter">Pilots</h3>
@@ -88,6 +94,8 @@
                 minPassengers: 0,
                 maxPassengers: 33333,
                 showAllPilots: false,
+                selects: ['BY CREW SIZE', 'BY COST IN CREDITS', 'BY MGLT NUMBER'],
+                select: 'BY CREW SIZE'
 
             }
         },
@@ -129,6 +137,7 @@
     aside {
         display: flex;
     }
+
     h1  {
         writing-mode: vertical-rl;
         transform: rotate(-180deg) translateY(-100%);
@@ -138,6 +147,20 @@
         line-height: 26px;
         font-weight: 800;
     }
+    select {
+        width: 238px;
+        height: 58px;
+        background: #212121;
+        border-radius: 3px;
+        color: #ffffff;
+        border-style: none;
+        padding: 11px;
+        font-family: Courier sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 600;
+    }
+
     .filters {
         height: 765px;
         width: 348px;
@@ -217,16 +240,27 @@
         cursor: all-scroll;
         appearance: none;
     }
+
+    @media (min-width: 530px) {
+        .select_filter {
+            display: none;
+        }
+    }
     @media (max-width: 530px ) {
         aside {
             flex-direction: column;
             align-items: center;
         }
+
         h1  {
             writing-mode: initial;
             transform: none;
 
         }
+        .starships_title {
+            margin-right: 108px;
+        }
+
     }
 
 

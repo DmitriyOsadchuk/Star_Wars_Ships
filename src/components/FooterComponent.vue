@@ -12,28 +12,9 @@
                     <li class="manu_item"><a href="#">Footer</a></li>
                 </ul>
                 <button class="footer_btn">
-                    <a class="go_top" href="#">fake sign up</a>
+                    <a class="go_top" href="#">mne naverh</a>
                 </button>
             </div>
-
-<!--            <div class="footer_logo">-->
-<!--                <img class="logo" src="images/Logotype.png">-->
-<!--            </div>-->
-<!--            <div class="col-md-6">-->
-<!--                <ul class="footer_nav">-->
-<!--                    <li class="footer_nav-item"><a href="#">Hero</a></li>-->
-<!--                    <li class="footer_nav-item"><a href="#">List</a></li>-->
-<!--                    <li class="footer_nav-item"><a href="#">CTA Block</a></li>-->
-<!--                    <li class="footer_nav-item-item"><a href="#">Footer</a></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-
-
-<!--            <div class="col footer_btn">-->
-<!--                <button class="go_top_btn">-->
-<!--                    <a class="go_top" href="#">mne naverh</a>-->
-<!--                </button>-->
-<!--            </div>-->
         </div>
     </footer>
 </template>

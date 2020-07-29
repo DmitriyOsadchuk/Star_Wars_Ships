@@ -1,15 +1,9 @@
 <template>
   <div id="app">
-<!--    <hamburger-component/>-->
+    <hamburger-component/>
     <header-component/>
-
-
     <router-view/>
-
-
     <footer-component/>
-
-
   </div>
 </template>
 
@@ -17,15 +11,15 @@
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from "./components/FooterComponent";
 
-// import HamburgerComponent from "./components/HamburgerComponent";
+import HamburgerComponent from "./components/HamburgerComponent";
 
 
 export default {
   name: 'App',
   components: {
-    // HamburgerComponent,
-    FooterComponent,
-    HeaderComponent,
+      HamburgerComponent,
+      FooterComponent,
+      HeaderComponent,
   }
 }
 </script>

@@ -41,6 +41,7 @@
     @media (max-width: 760px ) {
         main {
             flex-direction: column;
+            align-items: center;
         }
     }
 </style>

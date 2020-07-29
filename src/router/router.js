@@ -5,22 +5,18 @@ import Profile from "../pages/Profile";
 
 Vue.use(Router);
 
-const routes = [
-    {
-        path: '/',
-        name: 'StarWarsList',
-        component: StarWarsList
-    },
-    {
-        path: '/profile',
-        name: 'Profile',
-        component: Profile
-    }
-]
-const router = new Router({
-    routes
+export default new Router({
+    mode: "history",
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: StarWarsList
+        },
+        {
+            path: '/profile/:id',
+            name: 'profile',
+            component: Profile
+        }
+    ]
 })
-const app = new Vue({
-    router
-}).$mount('#app')
-export default router;

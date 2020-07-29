@@ -1,9 +1,9 @@
 <template>
     <header>
         <div class="header-container">
-            <a class="header-logo" href="#">
-                <img class="logo" src="images/Logotype.png">
-            </a>
+            <router-link :to="{ name: 'home' }" class="header-logo">
+                <img class="logo" src="images/Logotype.png" />
+            </router-link>
             <div class="header_nav">
                 <ul class="menu">
                     <li class="manu_item"><a href="#">Hero</a></li>
