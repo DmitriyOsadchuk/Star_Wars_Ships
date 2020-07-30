@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import StarWarsList from "../pages/StarWarsList";
+import StarWarsHome from "../pages/StarWarsHome";
 import Profile from "../pages/Profile";
+
 
 Vue.use(Router);
 
@@ -11,7 +12,7 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: StarWarsList
+            component: StarWarsHome
         },
         {
             path: '/profile/:id',

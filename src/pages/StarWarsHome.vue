@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <main-buner-component/>
+        <main-banner-component/>
         <main>
             <filter-component/>
             <star-wars-starshpis-component/>
@@ -13,14 +13,14 @@
 <script>
     import FilterComponent from "../components/FilterComponent";
     import StarWarsStarshpisComponent from "../components/StarWarsStarshpisComponent";
-    import MainBunerComponent from "../components/MainBunerComponent";
+    import MainBannerComponent from "../components/MainBannerComponent";
     import CommunicateComponent from "../components/CommunicateComponent";
     export default {
-        name: "StarWarsList",
+        name: "StarWarsHome",
         components: {
             StarWarsStarshpisComponent,
             FilterComponent,
-            MainBunerComponent,
+            MainBannerComponent,
             CommunicateComponent
 
         }

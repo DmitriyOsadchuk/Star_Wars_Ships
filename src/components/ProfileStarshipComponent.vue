@@ -109,7 +109,8 @@
             align-items: center;
         }
         .text_info {
-            margin-top: 20px
+            margin-top: 20px;
+            max-width: 339px;
         }
     }
 </style>

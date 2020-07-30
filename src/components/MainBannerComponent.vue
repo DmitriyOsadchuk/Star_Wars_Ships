@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        name: "MainBunerComponent",
+        name: "MainBannerComponent",
     };
 </script>
 
@@ -62,7 +62,7 @@
     }
     @media (max-width: 768px) {
         .main_title {
-            margin: 0 15px;
+            margin: auto;
             width: 345px;
         }
         .main_photo {

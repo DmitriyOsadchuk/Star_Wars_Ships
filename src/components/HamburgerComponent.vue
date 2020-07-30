@@ -10,10 +10,25 @@
             </ul>
 
         </transition>
+
+        <template v-for="burger in burgers">
+            <v-burger
+                    :active="isActive"
+                    @updated="isActive = $event"
+                    :type="burger"
+                    :key="burger"
+                    :burgerStyle="burgerStyle"
+            >
+            </v-burger>
+        </template>
     </nav>
+
+
 </template>
 
 <script>
+    import { VBurger } from 'vue-burger';
+    const burgers = ["boring"];
 
     export default {
         name: "HamburgerComponent",
@@ -26,6 +41,14 @@
                     'Footer'
                 ],
                 show: false,
+                component: {
+                    VBurger
+                },
+                isActive: false,
+                burgers,
+                burgerStyle: {
+                    "--padding": "30px"
+                }
             }
         },
     }
