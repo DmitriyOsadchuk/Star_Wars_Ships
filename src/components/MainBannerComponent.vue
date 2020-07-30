@@ -1,17 +1,13 @@
 <template>
     <div class="container">
-        <div class="rov main_title">
-            <div class="col-sm-12 col-md-4">
-                <img class="main_photo" src="images/main-face.png" />
+        <div class="main_title">
+            <div class="col-sm-12 banner_face">
+                <img class="face" src="images/main-face.png" />
             </div>
-            <div class="col-sm-12 col-md-8 description_block">
+            <div class="col-sm-12 description_block">
                 <h1 class="main_description">MAY THE FORCE BE WITH YOU</h1>
             </div>
         </div>
-        <!--               <div class="main-title">-->
-        <!--                   <img class="main-photo" src="images/main-face.png">-->
-        <!--                    <h1>MAY THE FORCE BE WITH YOU</h1>-->
-        <!--               </div>-->
     </div>
 </template>
 
@@ -34,10 +30,12 @@
         position: relative;
         border-radius: 20px;
     }
-    .main-title {
-        /*position: fixed;*/
+    .banner_face {
+        display: flex;
+        flex: 1;
     }
-    .main_photo {
+
+    .face {
         max-width: 412px;
         left: 35px;
         top: 100px;
@@ -46,6 +44,7 @@
     .description_block {
         display: flex;
         align-items: flex-end;
+        flex: 2;
     }
     .main_description {
         color: #ffffff;
@@ -58,31 +57,43 @@
         text-align: initial;
         margin: 0;
         top: 5px;
-        left: 25px;
+
     }
-    @media (max-width: 768px) {
+    @media (max-width: 530px) {
+        .description_block, .banner_face {
+            padding: 0;
+        }
         .main_title {
             margin: auto;
             width: 345px;
         }
-        .main_photo {
+        .face {
             width: 310px;
             left: 20px;
             top: 12px;
             position: absolute;
         }
         .main_description {
-            color: #ffffff;
-            font-family: Archivo, sans-serif;
-            font-style: normal;
             font-size: 60px;
             line-height: 78.1%;
-            display: flex;
-            align-items: center;
-            margin: 0;
             top: 5px;
-            left: -25px;
             width: 349px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main_title {
+            margin: auto;
+        }
+
+        .face {
+            left: 20px;
+            top: 12px;
+            position: absolute;
+        }
+        .main_description {
+
+            font-size: 60px;
         }
     }
 </style>

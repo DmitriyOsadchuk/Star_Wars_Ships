@@ -63,12 +63,12 @@
 
     .information {
         text-align: start;
-        /*margin-right: 25px;*/
         word-break: break-word;
         max-width: 233px;
     }
     .starship_name {
         font-weight: 600;
+        margin-top: 15px;
     }
     .information p {
         font-family: Courier, sans-serif;
