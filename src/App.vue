@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <hamburger-component/>
     <header-component/>
     <router-view/>
     <footer-component/>
@@ -11,13 +10,11 @@
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from "./components/FooterComponent";
 
-import HamburgerComponent from "./components/HamburgerComponent";
 
 
 export default {
   name: 'App',
   components: {
-      HamburgerComponent,
       FooterComponent,
       HeaderComponent,
   }

@@ -75,7 +75,6 @@
         font-weight: 800;
     }
 
-
     .btn_form {
         color: #ffffff;
         background-color: #000000;
