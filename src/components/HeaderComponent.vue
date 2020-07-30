@@ -16,13 +16,6 @@
                 </button>
             </div>
 
-
-<!--            <div class="col header_btn">-->
-<!--                <button class="fake-sign-up-btn">-->
-<!--                    <a class="fake-sign-up" href="#">fake sign up</a>-->
-<!--                </button>-->
-<!--            </div>-->
-
         </div>
     </header>
 </template>
@@ -91,7 +84,7 @@
         line-height: 18px;
         align-items: center;
         text-transform: uppercase;
-        margin: 20px;
+        padding: 16px;
     }
 
 

@@ -2,7 +2,7 @@
     <div class="container_banner">
         <div class="bg_banner">
             <div class="description_banner">
-                <h1 class="title_banner">Profile description</h1>
+                <h1 class="title_banner">Profile <br/> description</h1>
             </div>
             <img class="face_banner" src="images/small_face.png" alt="small face">
         </div>
@@ -32,8 +32,8 @@
     }
     .description_banner {
         display: flex;
-        flex-direction: column-reverse;
-        padding: 0 0 0 205px;
+        flex-direction: row;
+        align-items: flex-end;
     }
     .title_banner {
         color: #ffffff;
@@ -45,8 +45,32 @@
         text-align: initial;
         text-transform: uppercase;
         margin: 0;
+        left: 55px;
     }
     .face_banner {
         position: absolute;
+    }
+
+    @media (max-width: 768px) {
+        .bg_banner {
+            height: 449px;
+        }
+        .face_banner {
+            width: 310px;
+        }
+        .description_banner {
+            word-break: break-word;
+        }
+        .title_banner {
+            left: 5px;
+            font-size: 60px;
+        }
+
+    }
+    @media (max-width: 1024px) {
+        .title_banner {
+            font-size: 90px;
+            left: 0;
+        }
     }
 </style>

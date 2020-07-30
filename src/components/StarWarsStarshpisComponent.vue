@@ -57,21 +57,23 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        /* justify-content: space-around; */
+        justify-content: space-around;
         margin: 100px 10px 10px 35px;
     }
 
     .information {
         text-align: start;
-        margin-right: 25px;
+        /*margin-right: 25px;*/
+        word-break: break-word;
+        max-width: 233px;
     }
     .starship_name {
         font-weight: 600;
     }
     .information p {
+        font-family: Courier, sans-serif;
         font-size: 18px;
-        line-height: 32px;
-
+        line-height: 21px;
     }
 
     .info_content_block {
@@ -89,7 +91,7 @@
     }
 
     .inside_info {
-        font-family: Archivo Black;
+        font-family: Archivo Black, sans-serif;
         font-size: 24px;
         line-height: 26px;
         font-weight: 600;
@@ -124,10 +126,15 @@
         .starships_content {
             flex-direction: column;
             align-items: center;
+            margin: 0;
         }
-        .info_content {
+        .info_content_block {
             width: 334px;
             height: 220px;
+        }
+        .information {
+            margin: 0;
+            max-width: 334px
         }
     }
 </style>

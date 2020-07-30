@@ -100,6 +100,7 @@
         box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
         border-radius: 11px;
         margin: 10px 20px 20px 0;
+        word-break: break-word;
     }
     .title_info {
         font-family: Courier, sans-serif;

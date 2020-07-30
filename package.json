@@ -15,6 +15,7 @@
     "popper.js": "^1.16.1",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
+    "vue-burger": "^1.1.0",
     "vue-range-slider": "^0.6.0",
     "vue-router": "^3.3.4",
     "vue-slider-component": "^3.2.2"
